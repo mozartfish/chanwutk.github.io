@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    jekyll-theme-hyde-plus (0.3.5)
-      jekyll (>= 3.7, < 5.0)
+    personal-webpage (0)
+      jekyll (>= 3.7, < 4.0)
       jekyll-feed (~> 0.9.3)
       jekyll-gist (~> 1.5.0)
       jekyll-paginate (~> 1.1.0)
@@ -13,15 +13,15 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.5.2)
-      public_suffix (>= 2.0.2, < 4.0)
+    addressable (2.7.0)
+      public_suffix (>= 2.0.2, < 5.0)
     colorator (1.1.0)
     concurrent-ruby (1.1.6)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
     eventmachine (1.2.7)
-    faraday (0.15.1)
+    faraday (1.0.1)
       multipart-post (>= 1.2, < 3)
     ffi (1.13.1)
     forwardable-extended (2.6.0)
@@ -58,13 +58,14 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.3.6)
-    multi_json (1.13.1)
-    multipart-post (2.0.0)
-    octokit (4.9.0)
+    multi_json (1.15.0)
+    multipart-post (2.1.1)
+    octokit (4.18.0)
+      faraday (>= 0.9)
       sawyer (~> 0.8.0, >= 0.5.3)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
-    public_suffix (3.1.1)
+    public_suffix (4.0.5)
     pygments.rb (1.2.1)
       multi_json (>= 1.0.0)
     rake (12.3.3)
@@ -79,23 +80,23 @@ GEM
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
-    sawyer (0.8.1)
-      addressable (>= 2.3.5, < 2.6)
-      faraday (~> 0.8, < 1.0)
+    sawyer (0.8.2)
+      addressable (>= 2.3.5)
+      faraday (> 0.8, < 2.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.16)
+  bundler
   jekyll-feed
   jekyll-gist
   jekyll-paginate
   jekyll-seo-tag
-  jekyll-theme-hyde-plus!
+  personal-webpage!
   pygments.rb
   rake (~> 12.0)
   redcarpet
 
 BUNDLED WITH
-   1.16.1
+   2.1.4
