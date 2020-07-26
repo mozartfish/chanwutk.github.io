@@ -1,0 +1,26 @@
+.social-icons {
+  margin: 16px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+a.social:link, a.social:visited {
+  color: white;
+  text-decoration: none;
+  font-size: 32px;
+  padding: 8px;
+}
+
+a.social :hover {
+  opacity: 0.5;
+}
+
+figure {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+pre {
+  overflow-x: auto;
+  white-space: pre;
+}

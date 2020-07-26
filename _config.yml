@@ -1,0 +1,24 @@
+title:            Hyde Plus
+tagline:          'An improved Hyde Jekyll theme.'
+description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+url:              https://hyde-plus.emmanuelcorrales.com
+baseurl:          /
+
+# Build settings
+markdown:         redcarpet
+highlighter:      pygments
+permalink:        pretty
+paginate:         5
+
+author:
+  name:           'Emmanuel Corrales'
+  email:          contact@emmanuelcorrales.com
+  url:            https://emmanuelcorrales.com
+
+social:
+  twitter:        em_corrales
+  linkedin:       emmanuelcorrales
+  github:         EmmanuelCorrales
+  disqus:         emmanuel-corrales
+
+google_analytics:
