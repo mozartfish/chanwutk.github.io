@@ -3,8 +3,4 @@
 source "https://rubygems.org"
 gemspec
 
-group :jekyll_plugins do
-  gem 'jekyll-paginate'
-  gem 'jekyll-seo-tag'
-  gem 'kramdown'
-end
+gem "jekyll", ENV["JEKYLL_VERSION"] if ENV["JEKYLL_VERSION"]
