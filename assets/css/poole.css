@@ -180,16 +180,16 @@ pre code {
 }
 
 /* Pygments via Jekyll */
-.highlight {
+/* .highlight {
   margin-bottom: 1rem;
   border-radius: 4px;
 }
 .highlight pre {
   margin-bottom: 0;
-}
+} */
 
 /* Gist via GitHub Pages */
-.gist .gist-file {
+/* .gist .gist-file {
   font-family: Menlo, Monaco, "Courier New", monospace !important;
 }
 .gist .markdown-body {
@@ -208,7 +208,7 @@ pre code {
   color: inherit;
   background-color: transparent;
   border-radius: 0;
-}
+} */
 
 /* Quotes */
 blockquote {
