@@ -1,8 +1,80 @@
-// Placeholder to allow defining custom styles that override everything else.
-// (Use `_sass/minima/custom-variables.scss` to override variable defaults)
-
 img.my-photo {
   border-radius: 7%;
   width: 200px;
   margin: 0px 30px 30px 0px;
+}
+
+// Header title animation
+#title-nickname,
+#title-firstname,
+#title-lastname {
+  position: absolute;
+}
+
+.title-slide-in {
+  animation-name: slidein;
+  animation-duration: $title-animation-duration;
+}
+
+.title-slide-out {
+  animation-name: slideout;
+  animation-duration: $title-animation-duration;
+}
+
+.title-stay-left {
+  transform: $title-translate-left;
+}
+
+.title-stay-right {
+  transform: $title-translate-right;
+}
+
+.title-slide-left {
+  animation-name: slideleft;
+  animation-duration: $title-animation-duration;
+}
+
+.title-slide-right {
+  animation-name: slideright;
+  animation-duration: $title-animation-duration;
+}
+
+@keyframes slideleft {
+  from {
+    transform: $title-translate-right;
+  }
+  to {
+    transform: $title-translate-left;
+  }
+}
+
+@keyframes slideright {
+  from {
+    transform: $title-translate-left;
+  }
+  to {
+    transform: $title-translate-right;
+  }
+}
+
+@keyframes slidein {
+  from {
+    bottom: 100%;
+    opacity: 0;
+  }
+  to {
+    bottom: 3%;
+    opacity: 1;
+  }
+}
+
+@keyframes slideout {
+  from {
+    top: 0%;
+    opacity: 1;
+  }
+  to {
+    top: 100%;
+    opacity: 0;
+  }
 }

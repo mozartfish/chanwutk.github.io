@@ -3,7 +3,7 @@
   rel="icon"
   type="image/png"
   sizes="32x32"
-  href="assets/images/favicon.png"
+  href="/assets/images/favicon.png"
 />
 <script>
   (() => {
@@ -14,12 +14,12 @@
       `${name.substring(offset, name.length)} ${name.substring(0, offset)}`;
 
     let counter = 0;
-    const animatetitle = () => {
+    const animateTitle = () => {
       title.innerHTML = `${page} | ${cycle(counter)}`;
       counter = (counter + 1) % name.length;
     };
 
-    animatetitle();
-    setInterval(animatetitle, 1000);
+    animateTitle();
+    setInterval(animateTitle, 3000);
   })();
 </script>
