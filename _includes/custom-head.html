@@ -1,6 +1,25 @@
-{% comment %}
-  Placeholder to allow defining custom head, in principle, you can add anything here, e.g. favicons:
+<title></title>
+<link
+  rel="icon"
+  type="image/png"
+  sizes="32x32"
+  href="assets/images/favicon.png"
+/>
+<script>
+  (() => {
+    const page = "{{page.title}}" || "Home";
+    const title = document.querySelector("title");
+    const name = `${"{{site.title.firstname}}"} (${"{{site.title.nickname}}"}) ${"{{site.title.lastname}}"}`;
+    const cycle = (offset) =>
+      `${name.substring(offset, name.length)} ${name.substring(0, offset)}`;
 
-  1. Head over to https://realfavicongenerator.net/ to add your own favicons.
-  2. Customize default _includes/custom-head.html in your source directory and insert the given code snippet.
-{% endcomment %}
+    let counter = 0;
+    const animatetitle = () => {
+      title.innerHTML = `${page} | ${cycle(counter)}`;
+      counter = (counter + 1) % name.length;
+    };
+
+    animatetitle();
+    setInterval(animatetitle, 1000);
+  })();
+</script>

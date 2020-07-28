@@ -13,7 +13,7 @@
 
 .site-title {
   @include relative-font-size(1.625);
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: -1px;
   margin-bottom: 0;
   float: left;
@@ -131,10 +131,6 @@
   margin-bottom: $spacing-unit / 2;
 }
 
-.feed-subscribe .svg-icon {
-  padding: 5px 5px 2px 0
-}
-
 .contact-list,
 .social-media-list {
   list-style: none;
@@ -195,6 +191,9 @@
   }
 }
 
+.site-footer a.u-email > span {
+  color: $text-color;
+}
 
 
 /**
@@ -288,7 +287,6 @@
 
 
 .social-media-list {
-  display: table;
   margin: 0 auto;
   li {
     float: left;
