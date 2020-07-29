@@ -9,6 +9,48 @@ layout: default
 
   {{ content }}
 
+  <script>
+    // const addEmoji = (id, emojis) => document.getElementById(id).innerHTML += ' ' + emojis[Math.floor(Math.random() * emojis.length)];
+    const addEmoji = (id, emojis) => {};
+  </script>
+  <h2 id="home-projects-title">Projects and Contributions</h2>
+  <script>addEmoji('home-projects-title', ['&#10024;', '&#127872;', '&#127775;', '&#128293;', '&#128161;'])</script>
+  {%- for project in site.projects -%}
+    {%- if project.featured -%}
+      {{project.name}}
+      <br/>
+    {%- endif -%}
+  {%- endfor -%}
+
+  <h2 id="home-experience-title">Working Experiences</h2>
+  <script>addEmoji('home-experience-title', ['&#128084;', '&#128188;', '&#128119;'])</script>
+  <ul class="post-list">
+    {%- assign experiences = site.experiences | sort: 'end' | reverse -%}
+    {%- for experience in experiences -%}
+      <li>
+        <span class="post-meta">
+          {%- if experience.start == experience.end -%}
+            {{experience.start}}
+          {%- else -%}
+            {{experience.start}} - {{experience.end}}
+          {%- endif -%}
+        </span>
+        <h3 class="home-experience-company">{{experience.with}}</h3>
+        {{experience.position}}
+        <br/>
+        {{experience.description}}
+      </li>
+    {%- endfor -%}
+  </ul>
+
+  <!-- <h2 id="home-publications-title">Publications</h2>
+  <script>addEmoji('home-publications-title', ['&#128221;', '&#128220;'])</script> -->
+
+  <h2 id="home-education-title">Education</h2>
+  <script>addEmoji('home-education-title', ['&#128214;', '&#127890;'])</script>
+
+  <h2 id="home-skill-title">Skill Set</h2>
+  <script>addEmoji('home-skill-title', ['&#128295;', '&#128296;'])</script>
 
   {% if site.paginate %}
     {% assign posts = paginator.posts %}
