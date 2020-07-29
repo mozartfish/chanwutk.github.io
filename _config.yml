@@ -7,7 +7,7 @@ author:
   email: chanwutk<span>at</span>cs<span>dot</span>washington<span>dot</span>edu
 description: > # this means to ignore newlines until "show_excerpts:"
   This is my personal web page containing my personal and contact information.
-  This page is also an archive of the projects that I have worked on.
+  This page is also a collection of the projects that I have worked on.
 
 show_excerpts: true # set to true to show excerpts on the homepage
 
@@ -56,6 +56,12 @@ minima:
 
 # Build settings
 # theme: minima
+
+collections:
+  projects:
+    output: false
+  experiences:
+    output: false
 
 plugins:
  - jekyll-seo-tag
