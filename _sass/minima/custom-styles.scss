@@ -1,3 +1,27 @@
+// Common --------------------------------------------------------------------------------
+.home-item-title {
+  margin-bottom: 0px;
+}
+
+.home-item-description {
+  font-size: $small-font-size;
+  font-weight: lighter;
+  margin-bottom: 0px;
+}
+
+a.link-button {
+  border: 1px $link-base-color solid;
+  border-radius: 5px;
+  padding: 7px 15px 7px 15px;
+}
+a.link-button:hover {
+  background-color: $link-base-color;
+  color: white;
+  text-decoration: none;
+}
+
+
+// Project -------------------------------------------------------------------------------
 .home-projects {
   display: flex;
   flex-direction: row;
@@ -12,7 +36,7 @@
   align-items: center;
   margin-bottom: 20px;
   border-radius: 7px/7px;
-  border: thin black solid;
+  border: thin $border-color-02 solid;
 }
 
 .home-project-thumbnail-image {
@@ -23,20 +47,15 @@
   padding: 10px;
 }
 
-.home-project-container > .home-item-title {
-  margin-top: .5em;
-  align-self: flex-start;
+.home-project-container {
+  .home-item-title {
+    margin-top: .5em;
+    align-self: flex-start;
+  }
 }
 
-.home-item-title {
-  margin-bottom: 0px;
-}
 
-.home-item-description {
-  font-weight: lighter;
-  margin-bottom: 0px;
-}
-
+// Experience ----------------------------------------------------------------------------
 .home-experience-logo {
   border-radius: 7%;
   width: 60px;
@@ -45,28 +64,53 @@
   margin-right: 10px;
 }
 
+
+// Introduction --------------------------------------------------------------------------
 .intro-content {
   display: flex;
   flex-direction: row;
 }
 
+.profile-container {
+  min-width: 200px;
+  min-height: 200px;
+  margin: 0px 30px 0px 0px;
+}
+
 img.my-photo {
-  border-radius: 7%;
   width: 200px;
   height: 200px;
-  margin: 0px 30px 30px 0px;
+  border-radius: 7%;
 }
 
 @include media-query($on-palm) {
   .intro-content {
     flex-direction: column;
   }
-  img.my-photo {
+  .profile-container {
     align-self: center;
+    margin: 0px 0px 0px 0px;
+  }
+  img.my-photo {
+    width: 300px;
+    height: 300px;
   }
 }
 
-// Header title animation
+// overriding
+// TODO: make my own class
+.social-media-list {
+  display: flex;
+  justify-content: center;
+  li {
+    a {
+      border: none;
+    }
+  }
+}
+
+
+// Header title animation ----------------------------------------------------------------
 #title-nickname,
 #title-firstname,
 #title-lastname {

@@ -7,25 +7,24 @@ layout: default
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
 
-  <p style="font-size: 36px;">
-    &#128119;&#128679; This page is under construction &#128679;&#128119;
-  </p>
   <h1 class="page-heading">Hi, welcome to my personal page! &#127881;</h1>
   <div class="intro-content">
-    <img class="my-photo" src="assets/images/me.jpeg" />
+    {%- include components/social-profile.html -%}
     <div>
       {{ content }}
     </div>
   </div>
 
-  <h2 id="home-projects-title">Projects and Contributions</h2>
+  <br/>
+  <h2 id="projects">Projects and Contributions</h2>
   <div class="home-projects">
     {% for project in site.projects %}
-      {% include home/project.html project=project %}
+      {% include components/project-card.html project=project %}
     {% endfor %}
   </div>
 
   <script>
+    // TODO: remove this when images are all populated
     for (const canvas of document.querySelectorAll('.home-project-thumbnail-image')) {
       const ctx = canvas.getContext('2d');
       ctx.beginPath();
@@ -33,32 +32,35 @@ layout: default
     }
   </script>
 
-  <h2 id="home-experience-title">Working Experiences</h2>
+  <br/>
+  <h2 id="experiences">Working Experiences</h2>
   <ul class="post-list">
     {% assign exps_ends = site.experiences | group_by: 'end' | sort: 'end' | reverse %}
     {% for exps_end in exps_ends %}
       {% assign exps = exps_end.items | sort: 'start' | reverse %}
       {% for exp in exps %}
-        {% include home/experience.html exp=exp %}
+        {% include components/experience-card.html exp=exp %}
       {% endfor %}
     {% endfor %}
   </ul>
 
   <!-- <h2 id="home-publications-title">Publications</h2> -->
 
-  <h2 id="home-education-title">Education</h2>
+  <br/>
+  <h2 id="education">Education</h2>
 
-  <h2 id="home-skill-title">Skill Set</h2>
+  <br/>
+  <h2 id="skills">Skill Set</h2>
 
   <script>
     const TITLES_WITH_EMOJIS = false;
     if (TITLES_WITH_EMOJIS) {
       const addEmoji = (id, emojis) => document.getElementById(id).innerHTML += ' ' + emojis[Math.floor(Math.random() * emojis.length)];
-      addEmoji('home-projects-title', ['&#10024;', '&#127872;', '&#127775;', '&#128293;', '&#128161;'])
-      addEmoji('home-experience-title', ['&#128084;', '&#128188;', '&#128119;'])
-      // addEmoji('home-publications-title', ['&#128221;', '&#128220;'])
-      addEmoji('home-education-title', ['&#128214;', '&#127890;'])
-      addEmoji('home-skill-title', ['&#128295;', '&#128296;'])
+      addEmoji('projects', ['&#10024;', '&#127872;', '&#127775;', '&#128293;', '&#128161;'])
+      addEmoji('experiences', ['&#128084;', '&#128188;', '&#128119;'])
+      // addEmoji('publications', ['&#128221;', '&#128220;'])
+      addEmoji('education', ['&#128214;', '&#127890;'])
+      addEmoji('skill', ['&#128295;', '&#128296;'])
     }
   </script>
 </div>
