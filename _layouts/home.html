@@ -9,7 +9,15 @@ layout: default
 
   <h1 class="page-heading">Hi, welcome to my personal page! &#127881;</h1>
   <div class="intro-content">
-    {%- include components/social-profile.html -%}
+    <div class="profile-container">
+      <img class="my-photo" src="assets/images/me.jpeg" />
+      <div style="display: flex; flex-direction: row; justify-content: center; padding-top: 15px; padding-bottom: 15px">
+        {%- include components/link-button.html
+          link="http://chanwutk.github.io/resume/resume.pdf"
+          text="Here is my Resume!"
+        -%}
+      </div>
+    </div>
     <div>
       {{ content }}
     </div>
