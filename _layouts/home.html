@@ -7,97 +7,58 @@ layout: default
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
 
-  {{ content }}
+  <p style="font-size: 36px;">
+    &#128119;&#128679; This page is under construction &#128679;&#128119;
+  </p>
+  <h1 class="page-heading">Hi, welcome to my personal page! &#127881;</h1>
+  <div class="intro-content">
+    <img class="my-photo" src="assets/images/me.jpeg" />
+    <div>
+      {{ content }}
+    </div>
+  </div>
+
+  <h2 id="home-projects-title">Projects and Contributions</h2>
+  <div class="home-projects">
+    {% for project in site.projects %}
+      {% include home/project.html project=project %}
+    {% endfor %}
+  </div>
 
   <script>
-    // const addEmoji = (id, emojis) => document.getElementById(id).innerHTML += ' ' + emojis[Math.floor(Math.random() * emojis.length)];
-    const addEmoji = (id, emojis) => {};
+    for (const canvas of document.querySelectorAll('.home-project-thumbnail-image')) {
+      const ctx = canvas.getContext('2d');
+      ctx.beginPath();
+      ctx.fillRect(0, 0, 1000, 1000);
+    }
   </script>
-  <h2 id="home-projects-title">Projects and Contributions</h2>
-  <script>addEmoji('home-projects-title', ['&#10024;', '&#127872;', '&#127775;', '&#128293;', '&#128161;'])</script>
-  {%- for project in site.projects -%}
-    {%- if project.featured -%}
-      {{project.name}}
-      <br/>
-    {%- endif -%}
-  {%- endfor -%}
 
   <h2 id="home-experience-title">Working Experiences</h2>
-  <script>addEmoji('home-experience-title', ['&#128084;', '&#128188;', '&#128119;'])</script>
   <ul class="post-list">
-    {%- assign experiences = site.experiences | sort: 'end' | reverse -%}
-    {%- for experience in experiences -%}
-      <li>
-        <span class="post-meta">
-          {%- if experience.start == experience.end -%}
-            {{experience.start}}
-          {%- else -%}
-            {{experience.start}} - {{experience.end}}
-          {%- endif -%}
-        </span>
-        <h3 class="home-experience-company">{{experience.with}}</h3>
-        {{experience.position}}
-        <br/>
-        {{experience.description}}
-      </li>
-    {%- endfor -%}
+    {% assign exps_ends = site.experiences | group_by: 'end' | sort: 'end' | reverse %}
+    {% for exps_end in exps_ends %}
+      {% assign exps = exps_end.items | sort: 'start' | reverse %}
+      {% for exp in exps %}
+        {% include home/experience.html exp=exp %}
+      {% endfor %}
+    {% endfor %}
   </ul>
 
-  <!-- <h2 id="home-publications-title">Publications</h2>
-  <script>addEmoji('home-publications-title', ['&#128221;', '&#128220;'])</script> -->
+  <!-- <h2 id="home-publications-title">Publications</h2> -->
 
   <h2 id="home-education-title">Education</h2>
-  <script>addEmoji('home-education-title', ['&#128214;', '&#127890;'])</script>
 
   <h2 id="home-skill-title">Skill Set</h2>
-  <script>addEmoji('home-skill-title', ['&#128295;', '&#128296;'])</script>
 
-  {% if site.paginate %}
-    {% assign posts = paginator.posts %}
-  {% else %}
-    {% assign posts = site.posts %}
-  {% endif %}
-
-
-  {%- if posts.size > 0 -%}
-    {%- if page.list_title -%}
-      <h2 class="post-list-heading">{{ page.list_title }}</h2>
-    {%- endif -%}
-    <ul class="post-list">
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      {%- for post in posts -%}
-      <li>
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
-
-    {% if site.paginate %}
-      <div class="pager">
-        <ul class="pagination">
-        {%- if paginator.previous_page %}
-          <li><a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">{{ paginator.previous_page }}</a></li>
-        {%- else %}
-          <li><div class="pager-edge">•</div></li>
-        {%- endif %}
-          <li><div class="current-page">{{ paginator.page }}</div></li>
-        {%- if paginator.next_page %}
-          <li><a href="{{ paginator.next_page_path | relative_url }}" class="next-page">{{ paginator.next_page }}</a></li>
-        {%- else %}
-          <li><div class="pager-edge">•</div></li>
-        {%- endif %}
-        </ul>
-      </div>
-    {%- endif %}
-
-  {%- endif -%}
-
+  <script>
+    const TITLES_WITH_EMOJIS = false;
+    if (TITLES_WITH_EMOJIS) {
+      const addEmoji = (id, emojis) => document.getElementById(id).innerHTML += ' ' + emojis[Math.floor(Math.random() * emojis.length)];
+      addEmoji('home-projects-title', ['&#10024;', '&#127872;', '&#127775;', '&#128293;', '&#128161;'])
+      addEmoji('home-experience-title', ['&#128084;', '&#128188;', '&#128119;'])
+      // addEmoji('home-publications-title', ['&#128221;', '&#128220;'])
+      addEmoji('home-education-title', ['&#128214;', '&#127890;'])
+      addEmoji('home-skill-title', ['&#128295;', '&#128296;'])
+    }
+  </script>
 </div>

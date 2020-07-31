@@ -1,19 +1,64 @@
+.home-projects {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.home-project-container {
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  border-radius: 7px/7px;
+  border: thin black solid;
+}
+
+.home-project-thumbnail-image {
+  border-radius: 6px 6px 0px 0px;
+}
+
+.home-project-thumbnail-content {
+  padding: 10px;
+}
+
+.home-project-container > .home-item-title {
+  margin-top: .5em;
+  align-self: flex-start;
+}
+
+.home-item-title {
+  margin-bottom: 0px;
+}
+
+.home-item-description {
+  font-weight: lighter;
+  margin-bottom: 0px;
+}
+
+.home-experience-logo {
+  border-radius: 7%;
+  width: 60px;
+  height: 60px;
+  align-self: center;
+  margin-right: 10px;
+}
+
+.intro-content {
+  display: flex;
+  flex-direction: row;
+}
+
 img.my-photo {
   border-radius: 7%;
   width: 200px;
   height: 200px;
   margin: 0px 30px 30px 0px;
-  float: left;
-}
-
-.home-experience-company {
-  font-weight: bold;
-  margin-bottom: 0px;
 }
 
 @include media-query($on-palm) {
   .intro-content {
-    display: flex;
     flex-direction: column;
   }
   img.my-photo {
