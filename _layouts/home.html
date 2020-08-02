@@ -26,14 +26,14 @@ layout: default
   <br/>
   <h2 id="projects">Projects and Contributions</h2>
   <div class="home-projects">
-    {% for project in site.projects %}
-      {% include components/project-thumbnail.html project=project %}
-    {% endfor %}
+    {%- for project in site.projects -%}
+      {%- include components/project-thumbnail.html project=project -%}
+    {%- endfor -%}
   </div>
 
   <script>
     // TODO: remove this when images are all populated
-    for (const canvas of document.querySelectorAll('.home-project-thumbnail-image')) {
+    for (const canvas of document.querySelectorAll('canvas.home-project-thumbnail-image')) {
       const ctx = canvas.getContext('2d');
       ctx.beginPath();
       ctx.fillRect(0, 0, 1000, 1000);
@@ -43,13 +43,13 @@ layout: default
   <br/>
   <h2 id="experiences">Working Experiences</h2>
   <ul class="post-list">
-    {% assign exps_ends = site.experiences | group_by: 'end' | sort: 'end' | reverse %}
-    {% for exps_end in exps_ends %}
-      {% assign exps = exps_end.items | sort: 'start' | reverse %}
-      {% for exp in exps %}
-        {% include components/experience-card.html exp=exp %}
-      {% endfor %}
-    {% endfor %}
+    {%- assign exps_ends = site.experiences | group_by: 'end' | sort: 'end' | reverse -%}
+    {%- for exps_end in exps_ends -%}
+      {%- assign exps = exps_end.items | sort: 'start' | reverse -%}
+      {%- for exp in exps -%}
+        {%- include components/experience-card.html exp=exp -%}
+      {%- endfor -%}
+    {%- endfor -%}
   </ul>
 
   <!-- <h2 id="home-publications-title">Publications</h2> -->

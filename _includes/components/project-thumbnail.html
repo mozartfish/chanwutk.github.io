@@ -1,9 +1,13 @@
 <div class="home-project-container">
-  <canvas width=250 height=200 class="home-project-thumbnail-image"></canvas>
+  {%- if project.image -%}
+    <img src="{{ project.image }}" class="home-project-thumbnail-image" alt="">
+  {%- else -%}
+    <canvas width=250 height=200 class="home-project-thumbnail-image"></canvas>
+  {%- endif -%}
   <div class="home-project-thumbnail-content">
-    <a href="{{project.page}}"><h3 class="home-item-title">{{project.title}}</h3></a>
+    <a href="{{ project.page }}"><h3 class="home-item-title">{{ project.title }}</h3></a>
     <span class="home-item-description">
-      {{project.content}}
+      {{ project.content }}
     </span>
   </div>
 </div>

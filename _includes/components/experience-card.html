@@ -1,21 +1,21 @@
 <li>
   <div style="display: flex; flex-direction: row;">
-    <img src="{{exp.logo}}" class="home-experience-logo">
+    <img src="{{ exp.logo }}" class="home-experience-logo">
     <div>
       <span class="post-meta">
         {%- if exp.start == exp.end -%}
-          {{exp.start}}
+          {{ exp.start }}
         {%- else -%}
-          {{exp.start}} - {{exp.end}}
+          {{ exp.start }} - {{ exp.end }}
         {%- endif -%}
       </span>
       <h3 class="home-item-title">
-        {{exp.position}}
+        {{ exp.position }}
       </h3>
-      {{exp.with}}
+      {{ exp.with }}
     </div>
   </div>
   <span class="home-item-description">
-    {{exp.content}}
+    {{ exp.content }}
   </span>
 </li>
