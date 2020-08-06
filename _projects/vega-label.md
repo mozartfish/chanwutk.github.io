@@ -1,5 +1,7 @@
 ---
 title: Vega-Label
 page: https://github.com/vega/vega-label
+image: assets/images/projects/vega-label.png
+border: true
 ---
-Written enquire painful ye to offices forming it. Then so does over sent dull on.
+A fast labeling algorithm to layout labels annotating data points in charts. Now is a part of [Vega](https://github.com/vega/vega).

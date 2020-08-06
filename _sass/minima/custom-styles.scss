@@ -39,11 +39,18 @@ a.link-button:hover {
   border: thin $border-color-02 solid;
 }
 
-.home-project-thumbnail-image {
+.home-project-image,.home-project-image-with-border {
+  width: 250px;
+  height: 200px;
+  object-fit: contain;
   border-radius: 6px 6px 0px 0px;
 }
 
-.home-project-thumbnail-content {
+.home-project-image-with-border {
+  border-bottom: thin $border-color-02 solid;
+}
+
+.home-project-content {
   padding: 10px;
 }
 

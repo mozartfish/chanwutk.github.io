@@ -1,11 +1,22 @@
 <div class="home-project-container">
   {%- if project.image -%}
-    <img src="{{ project.image }}" class="home-project-thumbnail-image" alt="">
+    {%- if project.border -%}
+      <img src="{{ project.image }}" class="home-project-image-with-border" alt="">
+    {%- else -%}
+      <img src="{{ project.image }}" class="home-project-image" alt="">
+    {%- endif -%}
   {%- else -%}
-    <canvas width=250 height=200 class="home-project-thumbnail-image"></canvas>
+    <canvas width=250 height=200 class="home-project-image"></canvas>
   {%- endif -%}
-  <div class="home-project-thumbnail-content">
-    <a href="{{ project.page }}"><h3 class="home-item-title">{{ project.title }}</h3></a>
+  <div class="home-project-content">
+    <a href="{{ project.page }}">
+      <h3 class="home-item-title">
+        {{ project.title }}
+        {%- if project.contribution -%}
+          <sup style="font-size: x-small"> (contribution)</sup>
+        {%- endif -%}
+      </h3>
+    </a>
     <span class="home-item-description">
       {{ project.content }}
     </span>

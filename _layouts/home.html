@@ -33,7 +33,7 @@ layout: default
 
   <script>
     // TODO: remove this when images are all populated
-    for (const canvas of document.querySelectorAll('canvas.home-project-thumbnail-image')) {
+    for (const canvas of document.querySelectorAll('canvas.home-project-image')) {
       const ctx = canvas.getContext('2d');
       ctx.beginPath();
       ctx.fillRect(0, 0, 1000, 1000);
@@ -51,14 +51,6 @@ layout: default
       {%- endfor -%}
     {%- endfor -%}
   </ul>
-
-  <!-- <h2 id="home-publications-title">Publications</h2> -->
-
-  <br/>
-  <h2 id="education">Education</h2>
-
-  <br/>
-  <h2 id="skills">Skill Set</h2>
 
   <script>
     const TITLES_WITH_EMOJIS = false;
