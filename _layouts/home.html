@@ -26,7 +26,8 @@ layout: default
   <br/>
   <h2 id="projects">Projects and Contributions</h2>
   <div class="home-projects">
-    {%- for project in site.projects -%}
+    {%- assign projects = site.projects | sort: 'priority' -%}
+    {%- for project in projects -%}
       {%- include components/project-thumbnail.html project=project -%}
     {%- endfor -%}
   </div>
