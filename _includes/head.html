@@ -5,6 +5,25 @@
   {%- seo title=false -%}
   <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
 
-  {%- include custom-head.html -%}
+  <title></title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon.png" />
+  <script>
+    (() => {
+      const page = "{{ page.title }}" || "Home";
+      const title = document.querySelector("title");
+      const name = `${"{{ site.title.firstname }}"} (${"{{ site.title.nickname }}"}) ${"{{ site.title.lastname }}"}`;
+      const cycle = (offset) =>
+        `${name.substring(offset, name.length)} ${name.substring(0, offset)}`;
+
+      let counter = 0;
+      const animateTitle = () => {
+        title.innerHTML = `${page} | ${cycle(counter)}`;
+        counter = (counter + 1) % name.length;
+      };
+
+      animateTitle();
+      setInterval(animateTitle, 3000);
+    })();
+  </script>
   
 </head>
