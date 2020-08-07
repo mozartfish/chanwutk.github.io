@@ -5,5 +5,8 @@ description: empty
 start: '2019'
 end: present
 logo: /assets/images/experiences/cse.png
+description: >
+  Teaching CSE331 (Software Design and Implementation) and CSE442 (Data Visualization).
+  Teaches supplemental materials in quiz section. Grade students' assignments. And, hold
+  office hours for answering questions related to the class.
 ---
-By in no ecstatic wondered disposal my speaking. Direct wholly valley or uneasy it at really. Sir wish like said dull and need make. Sportsman one bed departure rapturous situation disposing his. Off say yet ample ten ought hence. Depending in newspaper an september do existence strangers. Total great saw water had mirth happy new. Projecting pianoforte no of partiality is on. Nay besides joy society him totally six. 

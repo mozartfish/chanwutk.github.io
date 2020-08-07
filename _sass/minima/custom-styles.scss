@@ -20,7 +20,6 @@ a.link-button:hover {
   text-decoration: none;
 }
 
-
 // Project -------------------------------------------------------------------------------
 .home-projects {
   display: flex;
@@ -39,7 +38,8 @@ a.link-button:hover {
   border: thin $border-color-02 solid;
 }
 
-.home-project-image,.home-project-image-with-border {
+.home-project-image,
+.home-project-image-with-border {
   width: 250px;
   height: 200px;
   object-fit: contain;
@@ -56,7 +56,7 @@ a.link-button:hover {
 
 .home-project-container {
   .home-item-title {
-    margin-top: .5em;
+    margin-top: 0.5em;
     align-self: flex-start;
   }
 }
@@ -67,16 +67,19 @@ a.link-button:hover {
   }
 }
 
-
 // Experience ----------------------------------------------------------------------------
 .home-experience-logo {
   border-radius: 7%;
   width: 60px;
   height: 60px;
   align-self: center;
-  margin-right: 10px;
+  margin: 10px;
 }
 
+.home-experience-container {
+  display: flex;
+  flex-direction: row;
+}
 
 // Introduction --------------------------------------------------------------------------
 .intro-content {
@@ -121,7 +124,6 @@ img.my-photo {
     }
   }
 }
-
 
 // Header title animation ----------------------------------------------------------------
 #title-nickname,

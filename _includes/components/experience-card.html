@@ -1,5 +1,5 @@
 <li>
-  <div style="display: flex; flex-direction: row;">
+  <div class="home-experience-container">
     <img src="{{ exp.logo }}" class="home-experience-logo">
     <div>
       <span class="post-meta">
@@ -15,7 +15,5 @@
       {{ exp.with }}
     </div>
   </div>
-  <span class="home-item-description">
-    {{ exp.content }}
-  </span>
+  <p class="home-item-description">{{ exp.description }}</p>
 </li>
