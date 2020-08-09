@@ -70,17 +70,13 @@ a.link-button:hover {
 
 @include media-query($on-palm) {
   .home-project-container {
-    margin: 5px;
-    width: 180px;
-    .home-item-title {
-      font-size: 14px;
-    }
+    width: 300px;
   }
 
   .home-project-image,
   .home-project-image-with-border {
-    width: 180px;
-    height: 144px;
+    width: 300px;
+    height: 240px;
   }
 }
 
