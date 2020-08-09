@@ -20,6 +20,13 @@ a.link-button:hover {
   text-decoration: none;
 }
 
+@include media-query($on-palm) {
+  .footer-col-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 // Project -------------------------------------------------------------------------------
 .home-projects {
   display: flex;
@@ -64,6 +71,16 @@ a.link-button:hover {
 @include media-query($on-palm) {
   .home-project-container {
     margin: 5px;
+    width: 200px;
+    .home-item-title {
+      font-size: 14px;
+    }
+  }
+
+  .home-project-image,
+  .home-project-image-with-border {
+    width: 200px;
+    height: 160px;
   }
 }
 
@@ -116,8 +133,8 @@ img.my-photo {
 // overriding
 // TODO: make my own class
 .social-media-list {
-  // display: flex;
-  // justify-content: center;
+  display: flex;
+  justify-content: center;
   li {
     a {
       border: none;
