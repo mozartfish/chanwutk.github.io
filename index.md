@@ -19,7 +19,7 @@ layout: home
   University of Washington in 2020. I have worked in DocuSign and OctoML
   during summers as a Software Engineering Intern. Aside from academic
   works, I was a volunteered officer of
-  <a hred="https://www.facebook.com/thaisauw/">Thai Students Association</a
+  <a href="https://www.facebook.com/thaisauw/">Thai Students Association</a
   >, coordinating social events and meetups for Thai students in the
   University of Washington.
 </p>
