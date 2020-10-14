@@ -24,6 +24,15 @@ layout: default
   </div>
 
   <br/>
+  <h2 id="publication">Publications</h2>
+  <div class="home-publications">
+    {%- assign publications = site.publications | sort: 'priority' -%}
+    {%- for publication in publications -%}
+      {%- include components/publication-thumbnail.html publication=publication -%}
+    {%- endfor -%}
+  </div>
+
+  <br/>
   <h2 id="projects">Projects and Contributions</h2>
   <div class="home-projects">
     {%- assign projects = site.projects | sort: 'priority' -%}

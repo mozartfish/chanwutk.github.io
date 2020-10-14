@@ -1,0 +1,21 @@
+<div class="home-publication-container">
+  {%- if publication.image -%}
+    {%- if publication.border -%}
+      <img src="{{ publication.image }}" class="home-publication-image-with-border" alt="">
+    {%- else -%}
+      <img src="{{ publication.image }}" class="home-publication-image" alt="">
+    {%- endif -%}
+  {%- else -%}
+    <canvas width=250 height=200 class="home-publication-image"></canvas>
+  {%- endif -%}
+  <div class="home-publication-content">
+    <a href="{{ publication.page }}">
+      <h3 class="home-item-title">
+        {{ publication.title }}
+      </h3>
+    </a>
+    <span class="home-item-description">
+      {{ publication.content }}
+    </span>
+  </div>
+</div>
