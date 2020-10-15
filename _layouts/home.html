@@ -24,7 +24,7 @@ layout: default
   </div>
 
   <br/>
-  <h2 id="publication">Publications</h2>
+  <h2 id="publications">Publications</h2>
   <div class="home-publications">
     {%- assign publications = site.publications | sort: 'priority' -%}
     {%- for publication in publications -%}
@@ -40,15 +40,6 @@ layout: default
       {%- include components/project-thumbnail.html project=project -%}
     {%- endfor -%}
   </div>
-
-  <script>
-    // TODO: remove this when images are all populated
-    for (const canvas of document.querySelectorAll('canvas.home-project-image')) {
-      const ctx = canvas.getContext('2d');
-      ctx.beginPath();
-      ctx.fillRect(0, 0, 1000, 1000);
-    }
-  </script>
 
   <br/>
   <h2 id="experiences">Working Experiences</h2>
