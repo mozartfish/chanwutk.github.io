@@ -6,7 +6,7 @@ layout: home
   Engineering at the University of Washington. I work as a research
   assistant in the
   <a href="https://idl.cs.washington.edu/">UW Interactive Data Lab</a>. I am
-  interested in Data Visualization and Machine Learning. My research explore
+  interested in Data Visualization and Data Systems. My research explore
   efficient methods to layout labels (annotations) of data points in charts.
   I contribute to existing research projects including
   <a href="https://vega.github.io/vega/">Vega</a> and
